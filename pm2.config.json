@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "cwd": "./packages/api",
+      "script": "yarn",
+      "args": "start"
+    },
+    {
+      "name": "frontend",
+      "cwd": "./packages/frontend",
+      "script": "yarn",
+      "args": "start"
+    }
+  ]
+}

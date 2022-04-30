@@ -1,0 +1,31 @@
+{
+  "name": "open-community",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "dev": "lerna run dev --stream",
+    "prepare": "husky install",
+    "lint": "lerna run lint",
+    "ts:check": "lerna run ts:check",
+    "create-super-admin": "node ./packages/api/createSuperAdmin.js"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=12.20.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "lerna": "^3.22.1",
+    "lint-staged": "^11.1.0",
+    "prettier": "^2.1.2"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx,md,json,html}": [
+      "prettier --write"
+    ]
+  },
+  "license": "MIT"
+}
